@@ -1,0 +1,379 @@
+{% load static %}
+<!-- FONT AWESOME ICONS LINKS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- FONT FAMILY -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Kanit:wght@100;800;900&family=Martel+Sans:wght@900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+<!-- TITLE ICONS -->
+<link rel="shortcut icon" type="image" href="{% static 'images/ash.png' %}">
+
+<!-- STYLE -->
+<style>
+
+    /* BODY */
+    body 
+    {
+        margin: 0;
+        font-family: 'Montserrat';
+    }
+    .ch_home{
+        width: 90%;
+        margin: auto;
+        margin-top: 3%;
+    }
+    .navbar{
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 3%;
+    }
+    .logo{
+        width: auto;
+    float: left;
+    }
+    .logo img{
+        width: 100px;
+    }
+    .navbar .right{
+        float: left;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    }
+    .navbar .right .search {
+    float: left;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    background: #f4f4f9;
+    padding: 10px 15px;
+    padding-bottom: 14px;
+    border-radius: 5px;
+}
+    .navbar .right .search i{
+        padding: 0px 10px;
+    }
+    .navbar .right .search input{
+        border: 0px;
+    background: transparent;
+    outline: 0; 
+    padding-top: 5px;
+    }
+    .navbar .right a {
+    display: inline-block;
+    margin-left: 35px;
+    background: #1977f3;
+    padding: 11px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding-bottom: 11px;
+}
+.navbar .right img {
+    width: 40px;
+    margin-left: 15px;
+    border-radius: 5px;
+    height: 40px;
+}
+.ch_main{
+    display: inline-block;
+    width: 100%;
+}
+.ch_main .left{
+    width: 30%;
+    float: left;
+    position: sticky;
+    top: 50px;
+}
+.ch_main .left .profile_card {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    padding: 15px 20px;
+    margin-left: 8%;
+}
+.ch_main .left .profile_card img {
+    width: 45px;
+    height: 45px;
+}
+.ch_main .left .profile_card span{
+    margin-left: 20px
+}
+.ch_main .left .sidebar a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 6%;
+    text-decoration: none;
+    color: black;
+}
+.ch_main .left .sidebar {
+    background: white;
+    margin-top: 10%;
+    width: 70%;
+    margin-left: 8%;
+    margin-top: 15%;
+    padding-top: 20px;
+    padding-left: 40px;
+    border-radius: 5px;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+}
+.main{
+    background: #f9fafb;
+    display: inline-block;
+    padding-top: 4%;
+    width: 100%;
+}
+.main .center {
+    float: left;
+    width : 40%;
+}
+.main .center .post_it {
+    background: white;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 4%;
+    padding-right: 30px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.main .center .posts{
+    margin-top: 8%;
+    border-radius: 5px;
+    padding: 0px 15px;
+    padding-bottom: 6%;
+    background-color: white;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+}
+.main .center .post_it img {
+    width: 50px;
+    height: 50px;
+}
+.main .center .post_it input {
+    outline: 0;
+    border: 0px;
+    margin-left: 20px;
+    width: 290px;
+}
+.main .center .post_it a{
+    
+
+display: inline-block;
+    margin-left: 35px;
+    background: #1977f3;
+    padding: 11px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding-bottom: 11px;
+}
+.ch_main .center .posts .profile_card {
+    /* width: 70%; */
+    display: flex;
+    align-items: center;
+    /* box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px; */
+    padding: 15px 20px;
+    /* margin-left: 8%; */
+}
+.ch_main .center .posts h3{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-left: 4%;
+}
+.ch_main .center .posts img{
+    margin-left: 4%;
+    margin-bottom: 10%;
+    width: 330px;
+    height: 190px;
+}
+.ch_main .center .posts .profile_card img {
+    width: 45px;
+    height: 45px;
+    margin:0 !important;
+}
+.ch_main .center .posts .profile_card span{
+    margin-left: 20px
+}
+.ch_main .center .posts .links{
+    margin-left: 4%;
+}
+.ch_main .center .posts .links i{
+    margin-right: 20px;
+    font-size: 18px;
+}
+.ch_main .left .sidebar .sideitem{
+    display: flex;
+    align-items: center;
+}
+.ch_main .left .sidebar .sideitem i{margin-top: -6%;
+    margin-right: 10%;}
+ 
+/*  */
+.ch_main .right .contacts .profile_card {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    padding: 15px 20px;
+    margin-left: 8%;
+    margin-bottom: 3%;
+}
+.ch_main .right .contacts .profile_card img {
+    width: 45px;
+    height: 45px;
+}
+.ch_main .right .contacts .profile_card span{
+    margin-left: 20px;
+}
+.ch_main .right{
+    float: left;
+    position: sticky;
+    top: 50px;
+}
+.ch_main .right h3{
+    margin-left: 10%;
+    color: #adb2bf;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 0px;
+}
+</style>
+
+<title>- Home</title>
+
+
+<!-- NEWS ITEM CARDS CODE -->
+<div class="home">
+    <div class="ch_home">
+        <div class="navbar">
+            <div class="logo">
+                <img src="{% static 'images/ss.jpg' %}" alt="">
+            </div>
+            <div class="right">
+                <div class="search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <a href="#">Create</a>
+                <img src="{% static 'images/E-Copy.jpg' %}" alt="">
+            </div>
+        </div>
+        <hr>
+        <div class="main">
+            <div class="ch_main">
+                <div class="left">
+                    <div class="profile_card">
+                        <img src="{% static 'images/E-Copy.jpg' %}" alt="">
+                        <span>Harshil Patadia</span>
+                    </div>
+                    <div class="sidebar">
+                        <div class="sideitem">
+                            <i class="fa fa-thin fa-house-chimney"></i><a href="#">Home</a>
+                        </div>
+                        <div class="sideitem">
+                            <i class="fa fa-regular fa-user"></i><a href="{% url 'explore' %}">Explore</a>
+                        </div>
+                        <div class="sideitem">
+                            <i class="fa fa-thin fa-camera"></i><a href="{% url 'chat' %}">Chat</a>
+                        </div>
+                        <div class="sideitem">
+                            <i class="fa fa-sharp fa-solid fa-radio"></i><a href="{% url 'news' %}">News Feed</a>
+                        </div>
+                        <div class="sideitem">
+                            <i class="fa fa-thin fa-user"></i><a href="{% url 'propli_up' %}">Profile</a>
+                        </div>
+                        <div class="sideitem">
+                            <i class="fa fa-thin fa-user"></i><a href="{% url 'logout' %}">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="post_it">
+                        <img src="{% static 'images/E-Copy.jpg' %}" alt="">
+                        <input type="text" placeholder="What's new Harshil ?">
+                        <a href="#">Create</a>
+                    </div>
+                    <div class="posts">
+                        <div class="profile_card">
+                            <img src="{% static 'images/E-Copy.jpg' %}" alt="">
+                            <span>Harshil Patadia</span>
+                        </div>
+                        <h3>A Thread : Why NGO's Works?</h3>
+                        {% comment %} <img src="{% static 'images/ss.jpg' %}" alt=""> {% endcomment %}
+                        <p>
+                            NGO stands for Non-Governmental Organization.
+                            NGOs work to make a positive change in various areas such as human rights, poverty, education, the environment, and more. 
+                            They do this by raising awareness, providing resources and support,
+                            and advocating for policy change. For example, 
+                            an NGO working on poverty might provide food and shelter for those in need, 
+                            while also advocating for systemic changes to address the root causes of poverty.
+                        </p>
+                        <div class="links">
+                            <i class="fa fa-thin fa-heart"></i>
+                            <i class="fa fa-thin fa-comment"></i>
+                            <i class="fa fa-solid fa-share"></i>
+                        </div>
+                    </div>
+                    <div class="posts">
+                        <div class="profile_card">
+                            <img src="{% static 'images/divy.jpg' %}" alt="">
+                            <span>Divyesh Rathod</span>
+                        </div>
+                        <h3>A Thread on Philanthropist</h3>
+                        {% comment %} <img src="{% static 'images/ss.jpg' %}" alt=""> {% endcomment %}
+                        <p>
+                            A philanthropist is an individual or organization who donates time, resources, or money to support a cause or multiple causes. The word "philanthropy" comes from the Greek word "philanthropos," which means "lover of humanity."
+
+Philanthropists are motivated by a desire to give back to their communities and to make a positive impact on the world. They may support a variety of causes, such as education, the arts, health and medicine, the environment, or human rights. Some philanthropists may focus their giving on a specific issue or geographic region, while others take a more broadly-focused approach.
+                        </p>
+                        <div class="links">
+                            <i class="fa fa-thin fa-heart"></i>
+                            <i class="fa fa-thin fa-comment"></i>
+                            <i class="fa fa-solid fa-share"></i>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="right">
+                    <h3>Contacts</h3>
+                    <div class="contacts">
+                        <div class="profile_card">
+                            <img src="{% static 'images/divy.jpg' %}" alt="">
+                            <span>Divyesh Rathod</span>
+                        </div>
+                        <div class="profile_card">
+                            <img src="{% static 'images/kr.jpg' %}" alt="">
+                            <span>Kartik Ramchandani</span>
+                        </div>
+                        <div class="profile_card">
+                            <img src="{% static 'images/bk.jpg' %}" alt="">
+                            <span>Bhargav Kanani</span>
+                        </div>
+                        <div class="profile_card">
+                            <img src="{% static 'images/mk.jpg' %}" alt="">
+                            <span>Mayur Kikani</span>
+                        </div>
+                        <div class="profile_card">
+                            <img src="{% static 'images/E-copy.jpg' %}" alt="">
+                            <span>Harshil Patadia</span>
+                        </div>
+                        <div class="profile_card">
+                            <img src="{% static 'images/pj.jpg' %}" alt="">
+                            <span>Parth Jaisur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

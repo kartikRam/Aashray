@@ -1,0 +1,402 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=2">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/da0ad79352.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="CSS/filter.css">
+    <link rel="stylesheet" href="CSS/edit.css">
+
+    <script>
+        function viewFilter(){
+            
+            document.getElementById("filter").style.display='block';
+            
+            document.getElementById("show-ngo").style.display='none';
+        }
+        function viewngo(){
+            
+            document.getElementById("filter").style.display='none';
+            
+            document.getElementById("show-ngo").style.display='block';
+        }
+    </script>
+
+    <style>
+        .dropbtn {
+            background-color: #1679f2;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
+          
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+          
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          .dropdown-content a:hover {background-color: #f1f1f1}
+          
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+          
+          .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+          }
+          .wrapper{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+          }
+          #btn-filter{
+            width: 120px;
+            height: 40px;
+            padding: 5px;
+          }
+          .filter{
+            display: none;
+          }
+          .filter-card{
+            margin-top: 40px;
+            padding:15px;
+            border-radius: 23px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          }
+        
+          body {
+            font-family: 'Roboto', Arial, sans-serif;
+            padding: 20px;
+          }
+          
+          .wrapper {
+            width: 100%;
+            max-width: 31.25rem;
+            
+          }
+          
+          .label {
+            font-size: .625rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: +1.3px;
+            margin-bottom: 1rem;
+          }
+          
+          .searchBar {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          }
+          
+          #searchQueryInput {
+            width: 100%;
+            height: 3.8rem;
+            background: #f5f5f5;
+            outline: none;
+            border: none;
+            border-radius: 1.625rem;
+            padding: 0 3.5rem 0 1.5rem;
+            font-size: 1rem;
+          }
+          
+          #searchQuerySubmit {
+            width: 3.5rem;
+            height: 2.8rem;
+            margin-left: -3.5rem;
+            background: none;
+            border: none;
+            outline: none;
+          }
+          
+          #searchQuerySubmit:hover {
+            cursor: pointer;
+          }
+        
+          .button{
+            background-color: #4d4dff;
+            height: 30px;
+            
+          }
+          
+          
+          #btn-home{
+            height: 40px;
+            width: 100px;
+            padding:10px;
+            border-radius: 10px;
+          }
+        
+          .inline{
+            max-width:400px;
+            margin:auto;
+        }
+        .input-icons i {
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 40px;
+            border-color: #ffff;
+        }
+          
+        .input-icons {
+            width: 100%;
+            margin-bottom: 3px;
+        }
+          
+        .icon {
+            padding: 20px;
+            min-width: 40px;
+        }
+          
+        .input-field {
+            width: 400px;
+            height: 39px;
+            padding: 7px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 5px;
+            border: #fff;
+            border-color: #4d4dff;
+        }
+        .input-field::active{
+          border-color: #4d4dff;
+        }
+        
+        #message-card.img{
+          width:10px;
+        }
+        .card {
+            margin-top: 2em;
+            padding:10px;
+            border-radius: 2em;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          }
+          .card img {
+            border-radius: 30px;
+          }
+           .card-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 500; 
+          }
+        .suggestion img{
+          border-radius: 10px;
+          width: 140px;
+          height: 180px;
+        }
+        .ngo-list{
+          align-items: stretch;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          overflow-y: hidden;
+          /* -ms-overflow-style: none;
+          scrollbar-width: none; */
+        }
+        .ngo-list::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollmenu {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+        .slider{
+          display: inline-flex;
+        
+        }
+        .ngo-list:hover + .slider{
+          display: flexbox;
+          color: black;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="col-sm-4" style="margin-left: 620px;">
+            <div class="input-icons" style="text-decoration: underline ;" >
+                <i class="fa fa-search"></i>
+                <input class="input-field" type="text" placeholder="Search" >
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <button type="button" class="btn btn-primary " id="btn-filter" onclick="viewFilter()" script="background-color:#1679f2"><i class="fa fa-light fa-filter"></i>    Apply Filters</button>
+        </div>
+        
+        
+    </div>
+        <div class="filter" id="filter">
+            <div class="contaier">
+                <div class="filter-card" style="width: 700px;height: 700px;margin-left: 380px;">
+                    <h3 style="font-weight: 600; text-align: center; color:#4d4dff;">Filters</h3>
+                    <div class="row">
+                        <div class="container">
+                        <div class="col-sm-4">
+                            <div class="filter-card" style="width:480px;margin-left:20%;margin-top: 80px;">
+                             <h4 style="font-weight: 600;text-align: center;">Sectors</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Age care (old age groups)
+                                    
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Agriculture
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <label class="form-check-label" for="flexCheckChecked">
+                                
+                                    Animal Welfare and Rights
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <label class="form-check-label" for="flexCheckChecked">
+                                
+                                    Art & Craft
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                
+                                    Child Education
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Cities/Urban Development
+                                </label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <label class="form-check-label" for="flexCheckChecked">
+                            Community Development
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                            Culture & Heritage
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <label class="form-check-label" for="flexCheckChecked">
+                            Disability
+                                </label>
+                            </div> 
+                        </div>
+                    </div>    
+                    </div>
+                </div>
+                    <div class="filter-card" style="width:580px;margin-top: 20px;margin-left: 4%;">
+                        <div class="form-group">
+                            <label for="formControlRange">Establishment Year</label>
+                            <input type="range" class="form-control-range" id="formControlRange" maxlength="2023" minlength="1900">
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary " id="btn-filter" onclick="viewngo()" style="width:50px; margin-top: 10%;"><i class="fa-solid fa-thumbs-up"></i> </button>
+                    </div>
+                </div>
+                
+
+            </div>
+            <!-- <div class="dropdown">
+            
+                <button class="dropbtn">Type of NGO's</button>
+                <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                </div>
+              </div> -->
+        </div>
+        
+        <div class="container-fluid" id="show-ngo">
+            <div class="card " style="width:900px;height:800px;margin-left: 250px;">
+                <div class="contaier ">
+                    <div class="card " style="width:700px;height:70px;margin-left: 110px;border-color: #4d4dff;">
+                        <div class="row">
+                                <div class="col-sm-2"> <img src="{% static 'images/mk.jpg' %}" style="width: 50px;height:50px;"></div>
+                                <div > <h4>Mayur Kikani</h4> </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width:700px;height:70px;margin-left: 110px;">
+                        <div class="row">
+                                <div class="col-sm-2"> <img src="{% static 'images/pj.jpg' %}" style="width: 50px;height:50px;"></div>
+                                <div > <h4>Parth Jaisur</h4> </div>        
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="width:700px;height:70px;margin-left: 110px;">
+                        <div class="row">
+                                <div class="col-sm-2"> <img src="{% static 'images/bk.jpg' %}" style="width: 50px;height:50px;"></div>
+                                <div > <h4>Bhargav Kanani</h4> </div>        
+                        </div>
+                    </div>
+
+                    
+                    <div class="card" style="width:700px;height:70px;margin-left: 110px;">
+                        <div class="row">
+                                <div class="col-sm-2"> <img src="{% static 'images/kr.jpg' %}" style="width: 50px;height:50px;"></div>
+                                <div > <h4>Kartik Ramchandani</h4> </div>        
+                        </div>
+                    </div>
+
+                    
+                    <div class="card" style="width:700px;height:70px;margin-left: 110px;">
+                        <div class="row">
+                                <div class="col-sm-2"> <img src="{% static 'images/divy.jpg' %}" style="width: 50px;height:50px;"></div>
+                                <div > <h4>Divyesh Rathod</h4> </div>        
+                        </div>
+                    </div>
+                    
+                    <div class="card" style="width:700px;height:70px;margin-left: 110px;">
+                        <div class="row">
+                                <div class="col-sm-2"> <img src="{% static 'images/E-Copy.jpg' %}" style="width: 50px;height:50px;"></div>
+                                <div > <h4>Harshil Patadia</h4> </div>        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</body>
+</html>

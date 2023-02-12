@@ -1,0 +1,141 @@
+{% load static %}
+<!-- FONT AWESOME ICONS LINKS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- FONT FAMILY -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Kanit:wght@100;800;900&family=Martel+Sans:wght@900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+<!-- TITLE ICONS -->
+<link rel="shortcut icon" type="image" href="{% static 'images/ash.png' %}">
+
+<!-- STYLE -->
+<style>
+
+    /* BODY */
+    body 
+    {
+        margin: 0;
+        font-family: 'Montserrat';
+    }
+
+    /* NEWS */
+    .news .left{
+        width: 100%;
+    float: left;
+    }
+    .news .right {
+        width: 40%;
+        float: left;
+        padding: 0px 50px;
+        text-align: center;
+    }
+    .news .left .item {
+        display: flex;
+        align-items: center;
+        background: #f7f9fa;
+        padding: 10px 22px;
+        margin-bottom: 20px;
+        box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    }
+    .news .left .item .item_center {
+        width: 35%;
+        margin: 0px 25px;
+    }
+    .news .left .item .item_center img{
+        width: 100%;
+    }
+    .news .left .item .item_right h2{
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+    .news .left .item .item_right h6{
+        display: inline-block;
+        margin: 0;
+        font-size: 15px;
+        margin-top: 10%;
+        font-weight: 400;
+    }
+    .news .left .item .item_right span h3{
+        width: auto;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .news .right .title{
+        display: flex;
+        align-items: center;
+    }
+    .news .right .icon_img{
+        width: 50px;
+        margin-right: 2%;
+    }
+    .news .right .title span h3{
+        width: auto;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .news .right .main_img{
+        width: 90%;
+    }
+    .news .right h2{
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+    }
+    .news .right h4{
+        font-size: 15px;
+        font-weight: 400;
+        text-align: left;
+    }
+    .news {
+        width: 85%;
+        margin: auto;
+        padding: 40px 25px;
+    }
+    .news .news_right_td{
+        width: 50%;
+        float: left;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    .news .ch_news{
+        display: flex;
+    }
+</style>
+
+<title>- News and Events</title>
+
+
+<!-- NEWS ITEM CARDS CODE -->
+<table>
+{% for blog in blogs %}
+<tr>
+<td> <div class="news">
+    <div class="ch_news">
+        <div class="left">
+            <div class="item">
+                <div class="item_left">
+                    <span>{{blog.day}}</span>
+                    <h2>{{blog.date}}</h2>
+                </div>
+                <div class="item_center">
+                    <img src="{{blog.imageURL}}" alt="">
+                </div>
+                <div class="item_right">
+                    <h6>{{blog.timeline}}</h6>
+                    <h2>{{blog.title}}</h2>
+                    <span><h3>By</h3>{{blog.author}}</span>
+                </div>
+            </div>
+           
+        </div>
+    </td>
+    </tr>
+
+
+        <br>
+        {% endfor %} 
+   
