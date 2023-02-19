@@ -1,0 +1,298 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME ICONS LINKS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- FONT FAMILY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Kanit:wght@100;800;900&family=Martel+Sans:wght@900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <!-- TITLE ICONS -->
+    <link rel="shortcut icon" type="image" href="{% static 'images/ash.png' %}">
+
+    <!-- STYLE -->
+    <style>
+
+        /* BODY */
+        body 
+        {
+            margin: 0;
+            font-family: 'Montserrat';
+        }
+
+
+        /* LOGIN */
+        .login{
+            display: flex;
+            width: 70%;
+            align-items: center;
+            margin: auto;
+            margin-top: 5%;
+            padding-bottom: 6%;
+            box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+            padding-top: 5%;
+            margin-bottom: 10%;
+        }
+        .login .left .logo{
+            margin-left: 13%;}
+        .login .left .logo span{font-size: 15px;
+            text-transform: uppercase;}
+        .login .left .logo span img{width: 80px;}
+        .login .left .img{margin-top: 15%;}
+        .login .left{
+            width: 50%;
+            float: left;
+        }
+        .login .left .img img{
+            width: 100%;
+        }
+
+        /* SINGIN RIGHT PART */
+        .login .right form {
+            width: 80%;
+            margin-top: 15%;
+        }
+        .login .right .d_input {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4%;
+            background: #eff2f4;
+            padding: 2px 0px;
+            color: #babdc3;
+            padding-left: 5%;
+            padding-bottom: 12px;
+            border-radius: 5px;
+            padding-top: 10px;
+        }
+        .login .right .d_input i{
+            font-size: 22px;
+        }
+        .login .right .d_input .right_input{
+            margin-left: 20px;
+        }
+        .login .right .d_input .right_input{
+            display: inline-block;
+            margin-bottom: 0px;
+        }
+        .login .right .d_input .right_input input {
+            border: 0px;
+            border-bottom: 1px solid black;
+            background: transparent;
+            outline: 0;
+        }
+        .login .right .d_input i.fa.fa-thin.fa-lock {
+            font-size: 32px;
+        }
+        .login .right .d_input a{
+            width: 100%;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .login .right{
+            width: 50%;
+            float: left;
+        }
+        .login .right a{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 6%;
+            margin-top: 5%;
+            color: black;
+        }
+        .login .right .btn1 {
+            border: 0;
+            background: #3b8ff7;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            margin-right: 4%;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .login .right .btn2 {
+            font-size: 15px;
+            background: transparent;
+            border: 0px;
+            cursor: pointer;
+            width:auto;
+        }
+        .login .right h2{
+            margin-top: 0px;
+        }
+        .login .right h3{
+            margin-top: 0px;
+            font-size: 15px;
+            font-weight: 300;
+            padding-right: 3%;
+        }
+
+        /* SIGNUP */
+        .signup {
+            display: flex;
+            width: 70%;
+            align-items: center;
+            margin: auto;
+            margin-top: 5%;
+            /* padding-bottom: 6%; */
+            box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+            padding-top: 4%;
+            margin-bottom: 10%;
+        }
+        .signup .right {
+            width: 50%;
+            float: left;
+            padding-left: 8%;
+        }
+        .signup .right h2 {
+            margin-top: 0px;
+        }
+        .signup .right h3 {
+            margin-top: 0px;
+            font-size: 15px;
+            font-weight: 300;
+            padding-right: 3%;
+        }
+        .signup .right form {
+            width: 90%;
+            margin-top: 6%;
+        }
+        .signup .left .logo span img{width: 80px;}
+        .signup .right .d_input {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4%;
+            background: #eff2f4;
+            padding: 2px 0px;
+            color: #babdc3;
+            padding-left: 5%;
+            padding-bottom: 12px;
+            border-radius: 5px;
+            padding-top: 10px;
+        }
+        .signup .right .d_input .right_input {
+            display: inline-block;
+            margin-bottom: 0px;
+        }
+        .signup .right .d_input .right_input {
+            margin-left: 20px;
+        }
+        .signup .right .d_input .right_input span{
+            font-size: 14px;
+        }
+        .signup .right .d_input .right_input input {
+            border: 0px;
+            border-bottom: 1px solid black;
+            background: transparent;
+            outline: 0;
+        }
+        .signup .right a {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 6%;
+            margin-top: 5%;
+            color: black;
+        }
+        .signup .right .btn1 {
+            border: 0;
+            background: #3b8ff7;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            margin-right: 4%;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .signup .right .btn2 {
+            font-size: 15px;
+            background: transparent;
+            border: 0px;
+            cursor: pointer;
+            width:auto;
+        }
+        .signup .left {
+            width: 50%;
+            float: left;
+        }
+        .signup .left .logo {
+            margin-right: 13%;
+            text-align: right;
+        }
+        .signup .left .logo span {
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+        .signup .left .img {
+            margin-top: 110%;
+            text-align: right;
+        }
+        .signup .left .img img {
+            width: 40%;
+        }
+
+    </style>
+    
+    <title>- Login</title>
+</head>
+<body>
+    <div class="login">
+        <div class="left">
+            <div class="logo">
+                <span><img src="{% static 'images/ss.jpg' %}" alt=""></span>
+            </div>
+            <div class="img">
+                <img src="{% static 'images/login.png' %}" alt="Login">
+            </div>
+        </div>
+        <div class="right">
+            <h2>Login Into Ashray</h2>
+            <h2>Welcome Back :)</h2>
+            <h3>To keep connected with us please login with your personal information by email address and password.</h3>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="d_input">
+                    <div class="left_input">
+                        <i class="fa fa-thin fa-envelope"></i>
+                    </div>
+                    <div class="right_input">
+                        <span>Username</span><br>
+                        <input type="text" name="username">
+                    </div>
+                </div>
+                <div class="d_input">
+                    <div class="left_input">
+                        <i class="fa fa-thin fa-lock"></i>
+                    </div>
+                    <div class="right_input">
+                        <span>Password</span><br>
+                        <input type="password" name="password">
+                    </div>
+                </div>
+                {% comment %} <div class="d_input">
+                    <div class="left_input">
+                        <i class="fa fa-thin fa-lock"></i>
+                    </div>
+                    <div class="right_input">
+                        <span>User-type</span><br>
+                        <input type="text" name="type">
+                    </div>
+                </div>
+                                {% endcomment %}
+                <a href="#">Forgot Password ?</a>
+                <input type="submit" value="Login Now" class="btn1">
+                <a href="{% url 'register' %}" class="btn2">Create Account</a>
+                <br>
+                {% for message in messages  %}
+                    {{message}}
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+</body>
+</html>

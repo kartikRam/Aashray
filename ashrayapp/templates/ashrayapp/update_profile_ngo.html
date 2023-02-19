@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME ICONS LINKS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- FONT FAMILY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Kanit:wght@100;800;900&family=Martel+Sans:wght@900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <!-- TITLE ICONS -->
+    <link rel="shortcut icon" type="image" href="images/Ashray.png">
+
+    <!-- STYLE -->
+    <style>
+
+    /* BODY */
+    body 
+    {
+        margin: 0;
+        font-family: 'Montserrat';
+    }
+    .ch_home{
+        width: 90%;
+        margin: auto;
+        margin-top: 3%;
+    }
+    .navbar{
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 3%;
+    }
+    .logo{
+        width: auto;
+    float: left;
+    }
+    .logo img{
+        width: 100px;
+    }
+    .navbar .right{
+        float: left;
+        width: 100%;
+        text-align: right;
+    }   
+    .navbar .right .search {
+        float: left;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        background: #f4f4f9;
+        padding: 10px 15px;
+        padding-bottom: 14px;
+        border-radius: 5px;
+    }
+    .navbar .right .search i{
+        padding: 0px 10px;
+    }
+    .navbar .right .search input{
+        border: 0px;
+        background: transparent;
+        outline: 0; 
+        padding-top: 5px;
+    }
+    .navbar .right img {
+        width: 40px;
+        margin-left: 15px;
+        border-radius: 5px;
+        height: 40px;
+    }
+    .ch_main{
+        display: inline-block;
+        width: 100%;
+    }
+    .main{
+        background: #f9fafb;
+        display: inline-block;
+        padding-top: 4%;
+        width: 100%;
+    }
+
+    /* ADD EVENT CSS */
+
+    /* PROFILE */
+    .profile{
+        margin-bottom: 10%;
+    }
+    .profile .banner .content .extra_content img{
+        width: 16%;
+        position: absolute;
+        top: -60%;
+    }
+    .profile .banner .content .extra_content .profile_under{
+        margin-left: 20%;
+    }
+    .profile form{
+        padding: 0px 30px;
+        width: 60%;
+        margin: auto;
+        margin-top: 5%;
+    }
+    .profile form .item{
+        margin-bottom: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .profile form .item span{
+        margin-right: 20%;
+        font-size: 18px;
+    }
+    .profile form .item input {
+        padding: 10px 10px;
+        border-radius: 7px;
+        border: 1px solid black;
+        width: 50%;
+    }
+    .profile form .item input[type="button"] {
+        background: #1679f2;
+        color: white;
+        width: 100%;
+        margin-top: 5%;
+        padding: 13px 0px;
+        border: 0px;
+        font-size: 15px;
+    }
+    .profile form .item textarea {
+        padding: 10px 10px;
+        border-radius: 7px;
+        border: 1px solid black;
+        width: 50%;
+    }
+    .profile .banner .surface{
+        background: #1679f2;
+        height: 180px;
+    }
+    .profile .banner .content {
+        padding: 0px 30px;
+    }
+    .profile .banner .content .extra_content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        position: relative;
+        margin: auto;
+    }
+    .profile .banner .content .extra_content .save .save_a{
+        background: #354155;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .profile .banner .content .extra_content .save .cancel_a{
+        border: 1px solid;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: black;
+        margin-right: 25px;
+    }
+    .profile .banner .content .extra_content .profile_under h3{
+        font-weight: 400;
+    }
+
+    /* INLINE NAVBAR */
+    .inline_navbar a {
+    margin-right: 2%;
+    color: black;
+    text-decoration: underline;
+}
+.inline_navbar .ch_inline_navbar{
+    width: 100%;
+    margin: auto;
+    margin-top: -10px;
+
+}
+</style>
+</head>
+<body>
+
+    <!-- hOME -->
+    <div class="home">
+        <div class="ch_home">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/Screenshot 2023-02-11 072716.jpg" alt="">
+                </div>
+                <div class="right">
+                    <div class="inline_navbar">
+                        <div class="ch_inline_navbar">
+                            <a href="home_ngo.html">Home</a>
+                            <a href="profile_ngo.html">Profile</a>
+                            <a href="donator_ngo.html">Donations</a>
+                            <a href="add_event_ngo.html">Add Event</a>
+                            <a href="news_ngo.html">News Feed</a>
+                            <a href="my_event_ngo.html">My Event</a>
+                            <a href="payment_received_ngo.html">Payment Received</a>
+                            <a href="chat_ngo.html">Messages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="main">
+                <div class="ch_main">
+                    <div class="profile">
+                        <div class="banner">
+                            <div class="surface">
+                            </div>
+                            <div class="content">
+                                <div class="extra_content">
+                                    <img src="images/IMG-0283.jpg" alt="">
+                                    <div class="profile_under">
+                                        <h2>Profile</h2>
+                                        <h3>Update your photo and personal details.</h3>
+                                    </div>
+                                    <div class="save">
+                                        <a href="#" class="cancel_a">Cancel</a>
+                                        <a href="#" class="save_a">Save</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form>
+                            <div class="item">
+                                <span>Name of NGO</span>
+                                <input type="text" value="Divyesh">
+                            </div>
+                            <div class="item">
+                                <span>Name of NGO Member</span>
+                                <input type="text" value="Divyesh">
+                            </div>
+                            <div class="item">
+                                <span>Email of NGO Member</span>
+                                <input type="email" value="Divyesh">
+                            </div>
+                            <div class="item">
+                                <span>Address</span>
+                                <textarea cols="30" rows="5"></textarea>
+                            </div>
+                            <div class="item">
+                                <span>Contact Number</span>
+                                <input type="text" value="Divyesh">
+                            </div>
+                            <div class="item">
+                                <span>NGO Type</span>
+                                <input type="text" value="Divyesh">
+                            </div>
+                            <div class="item">
+                                <span>Aim & Objective</span>
+                                <textarea cols="30" rows="5"></textarea>
+                            </div>
+                            <div class="item">
+                                <span>Established in</span>
+                                <input type="date">
+                            </div>
+                            <div class="item">
+                                <span>Registered in</span>
+                                <input type="date">
+                            </div>
+                            <div class="item">
+                                <span>Registration Number</span>
+                                <input type="text" value="Divyesh">
+                            </div>
+                            <div class="item">
+                                <span>NGO Founder</span>
+                                <input type="text" value="Divyesh">
+                            </div>
+                            <div class="item">
+                                <span>NGO Vision</span>
+                                <textarea cols="30" rows="5"></textarea>
+                            </div>
+                            <div class="item">
+                                <span>NGO Mission</span>
+                                <textarea cols="30" rows="5"></textarea>
+                            </div>
+                            <div class="item">
+                                <span>NGO Goal</span>
+                                <textarea cols="30" rows="5"></textarea>
+                            </div>
+                            <div class="item">
+                                <span>NGO Past History</span>
+                                <textarea cols="30" rows="5"></textarea>
+                            </div>
+                            <div class="item">
+                                <span>Past Programmes</span>
+                                <textarea cols="30" rows="5"></textarea>
+                            </div>
+                            <div class="item">
+                                <span>NGO Certificate</span>
+                                <input type="file" value="Divyesh">
+                            </div>
+                            <div class="item">
+                                <input type="button" value="Update Profile">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

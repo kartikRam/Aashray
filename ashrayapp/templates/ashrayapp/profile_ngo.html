@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME ICONS LINKS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- FONT FAMILY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Kanit:wght@100;800;900&family=Martel+Sans:wght@900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <!-- TITLE ICONS -->
+    <link rel="shortcut icon" type="image" href="images/Ashray.png">
+
+    <!-- STYLE -->
+    <style>
+
+    /* BODY */
+    body 
+    {
+        margin: 0;
+        font-family: 'Montserrat';
+    }
+    .ch_home{
+        width: 90%;
+        margin: auto;
+        margin-top: 3%;
+    }
+    .navbar{
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 3%;
+    }
+    .logo{
+        width: auto;
+    float: left;
+    }
+    .logo img{
+        width: 100px;
+    }
+    .navbar .right{
+        float: left;
+        width: 100%;
+        text-align: right;
+    }
+    .navbar .right .search {
+        float: left;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        background: #f4f4f9;
+        padding: 10px 15px;
+        padding-bottom: 14px;
+        border-radius: 5px;
+    }
+    .navbar .right .search i{
+        padding: 0px 10px;
+    }
+    .navbar .right .search input{
+        border: 0px;
+        background: transparent;
+        outline: 0; 
+        padding-top: 5px;
+    }
+    .navbar .right img {
+        width: 40px;
+        margin-left: 15px;
+        border-radius: 5px;
+        height: 40px;
+    }
+    .ch_main{
+        display: inline-block;
+        width: 100%;
+    }
+    .main{
+        background: #f9fafb;
+        display: inline-block;
+        padding-top: 4%;
+        width: 100%;
+    }
+
+    /* NGO PROFILE CSS */
+    .ch_main .profile .boxes{
+            display: flex;
+            margin: auto;
+            width: 92%;
+            margin-top: 3%;
+            margin-bottom: 5%;
+        }
+
+        /* LEFT */
+        .ch_main .profile .left{
+            float: left;
+            width: 40%;
+        }
+
+        /* LEFT BOX1 */
+        .ch_main .profile .left .box1{
+            text-align: center;
+        }
+        .ch_main .profile .left .box1 img
+        {
+            border-radius: 100%;
+            width: 200px;
+            height: 200px;
+        }
+        .ch_main .profile .left .box1 span{
+            display: inline-block;
+            width: 100%;
+            margin: 20px 0px;
+            font-size: 20px;
+        }
+
+        /* LEFT BOX2 */
+        .ch_main .profile .left .box2{
+            text-align: center;
+            box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+            padding-bottom: 10%;
+            margin-top: 12%;
+        }
+        .ch_main .profile .left .box2 img
+        {
+            border-radius: 100%;
+            width: 130px;
+            height: 130px;
+            padding-top: 15%;
+        }
+        .ch_main .profile .left .box2 span{
+            display: inline-block;
+            width: 100%;
+            margin: 10px 0px;
+            font-size: 20px;
+        }
+
+        /* LEFT BOX3 */
+        .ch_main .profile .left .box3{
+            text-align: center;
+            margin-top: 12%;
+            box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+            padding-top: 15%;
+            padding-bottom: 10%;
+        }
+        .ch_main .profile .left .box3 img
+        {
+            border-radius: 5%;
+            width: 200px;
+            height: 200px;
+        }
+        .ch_main .profile .left .box3 span{
+            display: inline-block;
+            width: 100%;
+            margin: 20px 0px;
+            font-size: 20px;
+        }
+
+        /* LEFT BOX4 */
+        .ch_main .profile .left .box4{
+            margin-top: 12%;
+            box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+            padding-top: 15%;
+            padding-bottom: 10%;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        .ch_main .profile .left .box4 .item{
+            font-weight: 400;
+        }
+        .ch_main .profile .left .box4 .item h3{
+            margin: 0;
+            font-weight: 500;
+            margin-bottom: 2%;
+        }
+        .ch_main .profile .left .box4 .item h2{
+            font-weight: 600;
+        }
+        .ch_main .profile .left .box4 .item h4 {
+            margin: 0;
+            margin-bottom: 5%;
+            font-weight: 400;
+        }
+        
+        /* RIGHT */
+        .ch_main .profile .right {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* RIGHT BOX1 */
+        .ch_main .profile .right .box1 {
+            box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+            width: 80%;
+            margin: auto;
+            padding-top: 2%;
+            padding-bottom: 3%;
+            text-align: left;
+            padding-left: 6%;
+            padding-right: 6%;
+        }
+        .ch_main .profile .right .box1 .item{
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+        }
+        .ch_main .profile .right .box1 .item h3{
+            margin: 0;
+            margin-right: 3%;
+            margin-bottom: 2%;
+            font-weight: 500;
+            width: 40%;
+        }
+        .ch_main .profile .right .box1 .item h2{
+            font-weight: 600;
+        }
+        .ch_main .profile .right .box1 .item h4{
+            margin: 0;
+            margin-bottom: 1%;
+            font-weight: 400;
+        }
+
+        /* RIGHT BOX2 */
+        .ch_main .profile .right .box2 {
+            box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+            width: 80%;
+            margin: auto;
+            padding-top: 2%;
+            padding-bottom: 3%;
+            text-align: left;
+            padding-left: 6%;
+            margin-top: 5%;
+            padding-right: 6%;
+        }
+        .ch_main .profile .right .box2 .item{
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+        }
+        .ch_main .profile .right .box2 .item h3{
+            margin: 0;
+            margin-right: 3%;
+            margin-bottom: 2%;
+            font-weight: 500;
+            width: 40%;
+        }
+        .ch_main .profile .right .box2 .item h2{
+            font-weight: 600;
+        }
+        .ch_main .profile .right .box2 .item h4{
+            margin: 0;
+            margin-bottom: 1%;
+            font-weight: 400;
+        }
+
+        /* RIGHT BOX3 */
+        .ch_main .profile .right .box3 {
+            box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+            width: 80%;
+            margin: auto;
+            padding-top: 2%;
+            padding-bottom: 1%;
+            text-align: left;
+            padding-left: 6%;
+            padding-right: 6%;
+            margin-top: 5%;
+        }
+        .ch_main .profile .right .box3 .item{
+            font-weight: 400;
+        }
+        .ch_main .profile .right .box3 .item h3{
+            margin: 0;
+            font-weight: 500;
+            margin-bottom: 2%;
+        }
+        .ch_main .profile .right .box3 .item h2{
+            font-weight: 600;
+        }
+        .ch_main .profile .right .box3 .item h4 {
+            margin: 0;
+            margin-bottom: 5%;
+            font-weight: 400;
+        }
+
+        /* INLINE NAVBAR */
+        .inline_navbar a {
+    margin-right: 2%;
+    color: black;
+    text-decoration: underline;
+}
+.inline_navbar .ch_inline_navbar{
+    width: 100%;
+    margin: auto;
+    margin-top: -10px;
+
+}
+.pupdate_heading{
+    display: inline-block;
+    margin-left: 35px;
+    background: #1977f3;
+    padding: 11px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding-bottom: 11px;
+}
+.uheading{
+    text-align: right;
+    width: 93.5%;
+}
+</style>
+</head>
+<body>
+
+    <!-- hOME -->
+    <div class="home">
+        <div class="ch_home">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="home_ngo.html"><img src="images/Screenshot 2023-02-11 072716.jpg" alt=""></a>
+                </div>
+                <div class="right">
+                    
+                    <div class="inline_navbar">
+                        <div class="ch_inline_navbar">
+                            <a href="home_ngo.html">Home</a>
+                            <a href="profile_ngo.html">Profile</a>
+                            <a href="donator_ngo.html">Donators</a>
+                            <a href="add_event_ngo.html">Add Event</a>
+                            <a href="news_ngo.html">News Feed</a>
+                            <a href="my_event_ngo.html">My Event</a>
+                            <a href="payment_received_ngo.html">Payment Received</a>
+                            <a href="chat_ngo.html">Messages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="main">
+                <div class="ch_main">
+                    <div class="uheading">
+                        <a href="update_profile_ngo.html" class="pupdate_heading">Update Profile</a>
+                    </div>
+                    <div class="profile">
+                        <div class="boxes">
+                            <div class="left">
+                
+                                <!-- NGO MEMBER PROFILE -->
+                                <div class="box1">
+                                    <img src="images/IMG-0283.jpg" alt="">
+                                    <span>Hello, Divyesh Rathod</span>
+                                </div>
+                
+                                <!-- DONATIONS -->
+                                <div class="box2">
+                                    <img src="images/rupee.png"/>
+                                    <span>Donations, 23560.50</span>
+                                </div>
+                                
+                                <!-- CERTIFICATE -->
+                                <div class="box3">
+                                    <img src="images/certificate.jpg"/>
+                                    <span>NGO Certification<i class="fa-light fa-badge-check"></i></span>
+                                </div>
+                
+                                <!-- CONTACT INFORMATION -->
+                                <div class="box4">
+                                    <h2>Contact Details</h2>
+                                    <div class="item">
+                                        <h3>Email Address</h3>
+                                        <h4>divyeshr312@gmail.com</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>Tel Number</h3>
+                                        <h4>011-23042326</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>Address</h3>
+                                        <h4>Voluntary Action Cell, NITI Aayog, Room No. 316, NITI Aayog, Sansad Marg, New Delhi - 110 001</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                
+                                <!-- NGO MEMBER DETAILS -->
+                                <div class="box1">
+                                    <h2>Personal Details</h2>
+                                    <div class="item">
+                                        <h3>Name of NGO Member</h3>
+                                        <h4>Divyesh Rathod</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>Email of NGO Member</h3>
+                                        <h4>divyeshr312@gmail.com</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>Contact of NGO Member</h3>
+                                        <h4>8320072230</h4>
+                                    </div>
+                                </div>
+                
+                                <!-- NGO BASIC DETAILS -->
+                                <div class="box2">
+                                    <h2>NGO Details</h2>
+                                    <div class="item">
+                                        <h3>Name of NGO</h3>
+                                        <h4>Saviours NGO</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>Founder of NGO</h3>
+                                        <h4>Divyesh Rathod</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>NGO Type</h3>
+                                        <h4>Visonary Kids helping</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>Established In</h3>
+                                        <h4>26/08/2002</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>Registered In</h3>
+                                        <h4>29/08/2002</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>Registered Number</h3>
+                                        <h4>G456382</h4>
+                                    </div>
+                                </div>
+                                
+                                <!-- NGO AIM AND OBJECTIVES -->
+                                <div class="box3">
+                                    <h2>NGO Aims & Objectives</h2>
+                                    <div class="item">
+                                        <h3>NGO Vision</h3>
+                                        <h4>Saviours NGO</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>NGO Mission</h3>
+                                        <h4>Visonary Kids helping</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>NGO Goals</h3>
+                                        <h4>26/08/2002</h4>
+                                    </div>
+                                </div>
+                
+                                <!-- NGO PAST DETAILS -->
+                                <div class="box3">
+                                    <h2>NGO Past History</h2>
+                                    <div class="item">
+                                        <h3>NGO Vision</h3>
+                                        <h4>Saviours NGO</h4>
+                                    </div>
+                                    <div class="item">
+                                        <h3>NGO Past Progrmmes</h3>
+                                        <h4>Visonary Kids helping</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME ICONS LINKS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- FONT FAMILY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Kanit:wght@100;800;900&family=Martel+Sans:wght@900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <!-- TITLE ICONS -->
+    <link rel="shortcut icon" type="image" href="images/Ashray.png">
+
+    <!-- STYLE -->
+    <style>
+
+    /* BODY */
+    body 
+    {
+        margin: 0;
+        font-family: 'Montserrat';
+    }
+    .ch_home{
+        width: 90%;
+        margin: auto;
+        margin-top: 3%;
+    }
+    .navbar{
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 3%;
+    }
+    .logo{
+        width: auto;
+    float: left;
+    }
+    .logo img{
+        width: 100px;
+    }
+    .navbar .right{
+        float: left;
+        width: 100%;
+        text-align: right;
+    }   
+    .navbar .right .search {
+        float: left;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        background: #f4f4f9;
+        padding: 10px 15px;
+        padding-bottom: 14px;
+        border-radius: 5px;
+    }
+    .navbar .right .search i{
+        padding: 0px 10px;
+    }
+    .navbar .right .search input{
+        border: 0px;
+        background: transparent;
+        outline: 0; 
+        padding-top: 5px;
+    }
+    .navbar .right img {
+        width: 40px;
+        margin-left: 15px;
+        border-radius: 5px;
+        height: 40px;
+    }
+    .ch_main{
+        display: inline-block;
+        width: 100%;
+    }
+    .main{
+        background: #f9fafb;
+        display: inline-block;
+        padding-top: 4%;
+        width: 100%;
+    }
+
+    /* MY EVENT CSS */
+    .posts{
+        margin-top: 2%;
+    border-radius: 5px;
+    padding: 0px 15px;
+    padding-bottom: 2%;
+    background-color: white;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    width: 70%;
+    }
+    .posts .profile_card {
+        /* width: 70%; */
+        display: flex;
+        align-items: center;
+        /* box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px; */
+        padding: 15px 20px;
+        /* margin-left: 8%; */
+    }
+    .posts h3{
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 0px;
+        margin-left: 4%;
+    }
+    .posts img {
+    margin-left: 4%;
+    margin-bottom: 3%;
+    width: 330px;
+    height: 190px;
+}
+    .posts .profile_card img {
+        width: 45px;
+        height: 45px;
+        margin:0 !important;
+    }
+    .posts .profile_card span{
+        margin-left: 20px
+    }
+    .posts .links{
+        margin-left: 4%;
+    }
+    .posts .links i{
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    /* INLINE NAVBAR */
+    .inline_navbar a {
+    margin-right: 2%;
+    color: black;
+    text-decoration: underline;
+}
+.inline_navbar .ch_inline_navbar{
+    width: 100%;
+    margin: auto;
+    margin-top: -10px;
+
+}
+</style>
+</head>
+<body>
+
+    <!-- hOME -->
+    <div class="home">
+        <div class="ch_home">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="home_philanthropist.html"><img src="images/Screenshot 2023-02-11 072716.jpg" alt=""></a>
+                </div>
+                <div class="right">
+                    <div class="inline_navbar">
+                        <div class="ch_inline_navbar">
+                            <a href="home_philanthropist.html">Home</a>
+                            <a href="profile_philanthropist.html">Profile</a>
+                            <a href="donator_philanthropist.html">Donations</a>
+                            <a href="add_event_philanthropist.html">Add Event</a>
+                            <a href="news_philanthropist.html">News Feed</a>
+                            <a href="my_event_philanthropist.html">My Event</a>
+                            <a href="payment_received_philanthropist.html">Payment Received</a>
+                            <a href="chat_philanthropist.html">Messages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="main">
+                <div class="ch_main">
+                    <h2 class="event_heading" style="margin-left: 8%;">Your Events</h2>
+                    <div class="posts" style="margin-left:8%">
+                        <div class="profile_card">
+                            <img src="images/post2_id.png" alt="">
+                            <span>OXFam NGOs</span>
+                        </div>
+                        <h3>Anyone who has worked at an NGO like Oxfam knows that it can be a job full of tensions and contradictions. Most of these boil down to the ever-prevailing conflict between our principled motivations to work towards social change vs. maneuvering the political constraints of our evolving social environment(s).</h3>
+                        <img src="images/post2.jpeg" alt="">
+                        <div class="links">
+                            <i class="fa fa-thin fa-heart"></i>
+                            <i class="fa fa-thin fa-comment"></i>
+                            <i class="fa fa-solid fa-share"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
